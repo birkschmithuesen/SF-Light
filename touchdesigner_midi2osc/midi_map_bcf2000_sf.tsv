@@ -1,0 +1,53 @@
+channel	type	index	mode	content
+1	ctrl	11	enc	pan
+1	note	21	enc_sense	pan
+1	ctrl	12	enc	tilt
+1	note	22	enc_sense	tilt
+1	ctrl	13	enc	red
+1	note	23	enc_sense	red
+1	ctrl	14	enc	green
+1	note	24	enc_sense	green
+1	ctrl	15	enc	blue
+1	note	25	enc_sense	blue
+1	ctrl	16	enc	white
+1	note	26	enc_sense	white
+1	ctrl	17	enc	zoom
+1	note	27	enc_sense	zoom
+1	ctrl	18	enc	intensity
+1	note	28	enc_sense	intensity
+1	ctrl	1		/pb/1
+1	ctrl	33		/pb/1/go
+1	ctrl	49		/pb/1/pause
+1	ctrl	65		/pb/1/flash
+1	ctrl	2		/pb/2
+1	ctrl	34		/pb/2/go
+1	ctrl	50		/pb/2/pause
+1	ctrl	66		/pb/2/flash
+1	ctrl	3		/pb/3
+1	ctrl	35		/pb/3/go
+1	ctrl	51		/pb/3/pause
+1	ctrl	67		/pb/3/flash
+1	ctrl	4		/pb/4
+1	ctrl	36		/pb/4/go
+1	ctrl	52		/pb/4/pause
+1	ctrl	68		/pb/4/flash
+1	ctrl	5		/pb/5
+1	ctrl	37		/pb/5/go
+1	ctrl	53		/pb/5/pause
+1	ctrl	69		/pb/5/flash
+1	ctrl	6		/pb/6
+1	ctrl	38		/pb/6/go
+1	ctrl	54		/pb/6/pause
+1	ctrl	70		/pb/6/flash
+1	ctrl	7		/pb/7
+1	ctrl	39		/pb/7/go
+1	ctrl	55		/pb/7/pause
+1	ctrl	71		/pb/7/flash
+1	ctrl	8		/pb/8
+1	ctrl	40		/pb/8/go
+1	ctrl	56		/pb/8/pause
+1	ctrl	72		/pb/8/flash
+1	note	10		/pb/8/go
+1	note	20		/pb/8/pause
+1	note	9		/exec/3/21
+1	note	19		/exec/3/22
