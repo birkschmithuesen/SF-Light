@@ -1,3 +1,32 @@
+PGeräte hängen so gleichverteilt wie geht
+
+Positionen loten
+
+Positionsmarkierungen und Trusshöhe vermessen und in MagicQ Bei den Attach Objects!!!! eintragen:
+Trusshöhe bei der Truss als Y Pos und x-Werte bei den einzeltrussen spikieX als x Pos und die y-Werte mal -1 dort als z Pos. 
+Dabei gleich alle Rot der Vis Heads resetten.
+Die Attach Objects bot1...bot16 sollten nun auch die richtigen x und z Pos haben. y Pos dann auf 0 setzen.
+
+
+anyDesk nutzen zur Fernsteuerung des Lichtrechners (annehmen nicht vergessen)
+
+Tilt-Offeset
+Da die Movingheads immer so nen kleinen Schuss weg haben: Zum Einstellen der Tilt-Mittelstellung alle MH auf position center und per panctrl-channel langsam rotieren lassen und den Tilt Offset TO (patch - view heads) so einstellen, dass der Mittelpunkt stimmt (der Lichtpunkt dreht sich in sich dann ohne eiern).
+Zur Annäherung an den korrekten Wert zunächst das Vorzeichen ermitteln: grosse Werte (zB 2°/-2°) eingeben und schauen ob sich das Eiern in die selbe Richtung verstärkt oder in die andere Richtung umschlägt. Das Vorzeichen mit Richtungsänderung ist zu verwenden.
+Dort in 0.1-Schritten angeleichen bis minimales eierb erreicht ist.
+(Schade: In der Tabelle sehen wir keine Nachkommastellen.)
+
+Hardware anfassen
+alle Spikies nun in Position center und bestmöglich ausrichten
+(könnte wahrscheinlich auch weggelassen werden und komplett per vis-patch-Korrekturen gemacht werden)
+
+Z rot und X Rot
+auf bot positionieren und zentrieren mit z Rot und x Rot
+
+Y Rot
+auf bot gegenüber und rechts links mit y Rot angleichen. x Rot darf auchnochmal nachgestellt werden
+
+
 ~~Bevor mit Kalibrierung gestartet werden kann, MQ settings kontrollieren:~~
 
 ~~Damit tracker empfangen werden müssen folgende Einstellungen aktiviert sein:~~

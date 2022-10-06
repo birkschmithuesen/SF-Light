@@ -1,8 +1,8 @@
-///// SystemFailed Licht-Setup
+# SystemFailed Licht-Setup
 - ein kurzes Manual
 
 
-/// Intro
+## Intro
 
 In diesem Dokument soll beschrieben werden, wie das Licht-Setup für die Performance System Failed aufgebaut ist.
 
@@ -15,13 +15,27 @@ Per UDP-Stream (touchIn) vom Haupt-Touchdesigner-Patch der Show werden die die r
 Im Script wird dann entschieden, welche Lampen mit welchen Parametern (Farbe, Zoom, ...) die Highlights beleuchten sollen und wiederum per OSC und Artnet wird MagicQ ferngesteuert.
 
 
-/// MagicQ-MIDI-Interfacing
+## MagicQ-MIDI-Interfacing
 
-...
+### known bugs
+
+Fehler: Beim Start wird der Korg nicht erkannt, TD hat ein anderes Korg device gelistet.
+Lösung: Dialogs -> MIDI Device Mapper -> Device Mappings -> das richtige In Device wählen
 
 
 
-/// lightingRig
+## lightingRig
 
-...
+lightingRig.toe ist ein Touchdesigner-Patch, der "highlight"daten vom Haupt Touchdesigner-Patch des Stückes bekommt und MagicQ entsprechend fernsteuert. 
+In diesen Daten wird neben Koordinaten unter anderem auch der angeforderte "Highlightcue" gesendet. Dieser gibt an, ob der Highlight zB eine Freeze-Violation oder ein Performer-Highlight ist. 
+Der entsprechende Look ist in der Tabelle config/dat_cue_table.csv abgelegt und kann dort editiert werden.
 
+
+### Trouble shoot
+
+Fehler: Highlights sind nicht sichtbar
+Lösung: HighlightChannel von MagicQ kommt nicht bei TD an, weil nicht hochgezogen, oder DMX vom MQ nicht bei TD ankommt
+
+Fehler: DMX vom MagicQ kommt nicht bei TD an
+Lösung: Setup DMX IO
+Lösung: DMX-Receiver von TD funktioniert nicht richtig - Local Address hin und herstellen
