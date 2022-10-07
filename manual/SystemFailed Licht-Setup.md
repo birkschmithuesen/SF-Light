@@ -17,7 +17,7 @@ Im Script wird dann entschieden, welche Lampen mit welchen Parametern (Farbe, Zo
 
 ## MagicQ-MIDI-Interfacing
 
-### known bugs
+### Troubleshooting
 
 Fehler: Beim Start wird der Korg nicht erkannt, TD hat ein anderes Korg device gelistet.
 Lösung: Dialogs -> MIDI Device Mapper -> Device Mappings -> das richtige In Device wählen
@@ -31,11 +31,11 @@ In diesen Daten wird neben Koordinaten unter anderem auch der angeforderte "High
 Der entsprechende Look ist in der Tabelle config/dat_cue_table.csv abgelegt und kann dort editiert werden.
 
 
-### Trouble shoot
+### Troubleshooting
 
 Fehler: Highlights sind nicht sichtbar
 Lösung: HighlightChannel von MagicQ kommt nicht bei TD an, weil nicht hochgezogen, oder DMX vom MQ nicht bei TD ankommt
 
 Fehler: DMX vom MagicQ kommt nicht bei TD an
 Lösung: Setup DMX IO
-Lösung: DMX-Receiver von TD funktioniert nicht richtig - Local Address hin und herstellen
+Lösung: DMX-Receiver von TD funktioniert nicht richtig (im Balkendiagramm ist keine Änderung sichtbar, wenn die HLSpikie-Kanäle verändert werden) - Local Address hin und herstellen
