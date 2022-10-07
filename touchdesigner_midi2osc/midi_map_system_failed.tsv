@@ -51,3 +51,11 @@ channel	type	index	mode	content
 1	note	20		/pb/8/pause
 1	note	9		/exec/3/21
 1	note	19		/exec/3/22
+1	ctrl	82		/exec/2/1
+1	ctrl	83		/exec/2/2
+1	ctrl	84		/exec/2/3
+1	ctrl	85		/exec/2/4
+1	ctrl	86		/exec/2/5
+1	ctrl	87		/exec/2/6
+1	ctrl	88		/exec/2/7
+1	ctrl	89		/exec/2/8
