@@ -39,3 +39,6 @@ Lösung: HighlightChannel von MagicQ kommt nicht bei TD an, weil nicht hochgezog
 Fehler: DMX vom MagicQ kommt nicht bei TD an
 Lösung: Setup DMX IO
 Lösung: DMX-Receiver von TD funktioniert nicht richtig (im Balkendiagramm ist keine Änderung sichtbar, wenn die HLSpikie-Kanäle verändert werden) - Local Address hin und herstellen
+
+Fehler: TDactivation reagiert nicht, obwohl DMX ankommt
+Lösung: Re-Init-all-Button (dann aber auch nochmal reset highlights)
