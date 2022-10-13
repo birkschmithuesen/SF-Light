@@ -8,24 +8,18 @@
 # Make sure the corresponding toggle is enabled in the CHOP Execute DAT.
 
 def onOffToOn(channel, sampleIndex, val, prev):
-	debug(channel, sampleIndex, val, prev)
 	return
 
 def whileOn(channel, sampleIndex, val, prev):
-	debug(channel.name, sampleIndex, val, prev)
-	if prev != val:
-		pass #debug(channel.name, val, prev)
 	return
 
 def onOnToOff(channel, sampleIndex, val, prev):
-	debug(channel, sampleIndex, val, prev)
 	return
 
 def whileOff(channel, sampleIndex, val, prev):
-	debug(channel.name, sampleIndex, val, prev)
 	return
 
 def onValueChange(channel, sampleIndex, val, prev):
-	debug(channel.name, sampleIndex, val, prev)
+	me.ext.DMXManagerExt.updateDmxChannel(channel.index, val)
 	return
 	
