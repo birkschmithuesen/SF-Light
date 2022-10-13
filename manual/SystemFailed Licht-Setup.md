@@ -55,12 +55,14 @@ Im Schaubild ist der Zusammenhang der 5 Hauptkomponenten des Patches beschrieben
 
 ### Troubleshooting
 
-Fehler: Highlights sind nicht sichtbar
+Fehler: Highlights sind nicht sichtbar. 
+
+
 Lösung: HighlightChannel von MagicQ kommt nicht bei TD an, weil nicht hochgezogen, oder DMX vom MQ nicht bei TD ankommt
 
-Fehler: DMX vom MagicQ kommt nicht bei TD an
-Lösung: Setup DMX IO
+Fehler: DMX vom MagicQ kommt nicht bei TD an. 
+Lösung: Setup DMX IO. 
 Lösung: DMX-Receiver von TD funktioniert nicht richtig (im Balkendiagramm ist keine Änderung sichtbar, wenn die HLSpikie-Kanäle verändert werden) - Local Address hin und herstellen
 
-Fehler: TDactivation reagiert nicht, obwohl DMX ankommt
+Fehler: TDactivation reagiert nicht, obwohl DMX ankommt. 
 Lösung: Re-Init-all-Button (dann aber auch nochmal reset highlights)

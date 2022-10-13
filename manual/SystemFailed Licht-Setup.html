@@ -1264,8 +1264,13 @@ Die relevanten Trackerpositionen, die mit Highlights beleuchtet werden sollen, w
 <p>Das TD-Patch midi2oscDAT übersetzt eingehende MIDI-Messages zu osc-Messages. Im Patch gibt es eine bearbeitbare Mapping-Tabelle.</p>
 <p>(<strong>TODO</strong>: Mapping-Möglichkeiten erklären, Encoderverwendung beschreiben - fine/coarse, ...)</p>
 <h3 class="atx" id="troubleshooting">Troubleshooting</h3>
-<p>Fehler: Beim Start wird der Korg nicht erkannt, TD hat ein anderes Korg device gelistet.
-Lösung: Dialogs -&gt; MIDI Device Mapper -&gt; Device Mappings -&gt; das richtige In Device wählen</p>
+<ul>
+<li><p>Fehler: Beim Start wird der Korg nicht erkannt, TD hat ein anderes Korg device gelistet.</p>
+<ul>
+<li>Lösung: Dialogs -&gt; MIDI Device Mapper -&gt; Device Mappings -&gt; das richtige In Device wählen</li>
+</ul>
+</li>
+</ul>
 <h2 class="atx" id="magicq-und-lightingrig">MagicQ und lightingRig</h2>
 <p><img alt="alt text" src="file:///Users/jeanbluer/Documents/data/wip/arbeit/SystemFailed/SF-Light/manual/SF-lightingRig-MQ.png"></p>
 <p>Im Schaubild ist der Zusammenhang der 5 Hauptkomponenten des Patches beschrieben:</p>
@@ -1290,11 +1295,26 @@ Lösung: Dialogs -&gt; MIDI Device Mapper -&gt; Device Mappings -&gt; das richti
 </li>
 </ul>
 <h3 class="atx" id="troubleshooting-1">Troubleshooting</h3>
-<p>Fehler: Highlights sind nicht sichtbar
-Lösung: HighlightChannel von MagicQ kommt nicht bei TD an, weil nicht hochgezogen, oder DMX vom MQ nicht bei TD ankommt</p>
-<p>Fehler: DMX vom MagicQ kommt nicht bei TD an
-Lösung: Setup DMX IO
-Lösung: DMX-Receiver von TD funktioniert nicht richtig (im Balkendiagramm ist keine Änderung sichtbar, wenn die HLSpikie-Kanäle verändert werden) - Local Address hin und herstellen</p>
+<ul>
+<li><p>Fehler: Highlights sind nicht sichtbar. </p>
+<ul>
+<li>Lösung: HighlightChannel von MagicQ kommt nicht bei TD an, weil nicht hochgezogen, oder DMX vom MQ nicht bei TD ankommt</li>
+</ul>
+</li>
+<li><p>Fehler: DMX vom MagicQ kommt nicht bei TD an. </p>
+<ul>
+<li><p>Lösung: Setup DMX IO. </p>
+</li>
+<li><p>Lösung: DMX-Receiver von TD funktioniert nicht richtig (im Balkendiagramm ist keine Änderung sichtbar, wenn die HLSpikie-Kanäle verändert werden) - Local Address hin und herstellen</p>
+</li>
+</ul>
+</li>
+<li><p>Fehler: TDactivation reagiert nicht, obwohl DMX ankommt. </p>
+<ul>
+<li>Lösung: Re-Init-all-Button (dann aber auch nochmal reset highlights)</li>
+</ul>
+</li>
+</ul>
 </article>
 </body>
 </html>
