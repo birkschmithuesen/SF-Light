@@ -17,7 +17,7 @@ Die Werte der Spikies, die "TD activated" sind, können durch vom TD ausgewählt
 
 Der "Look" der Überschreibung durch TD kann im MagicQ anhand der "virtuellen" Highlight Fixtures ("HLspikie") gesetzt werden.
 
-![alt text](/Users/jeanbluer/Documents/data/wip/arbeit/SystemFailed/SF-Light/manual/SF-light-wiring.png)
+![alt text](images/SF-light-wiring.png)
 
 ## MagicQ-MIDI-Interfacing
 
@@ -27,12 +27,17 @@ Das TD-Patch midi2oscDAT übersetzt eingehende MIDI-Messages zu osc-Messages. Im
 
 ### Troubleshooting
 
-Fehler: Beim Start wird der Korg nicht erkannt, TD hat ein anderes Korg device gelistet.
-Lösung: Dialogs -> MIDI Device Mapper -> Device Mappings -> das richtige In Device wählen
+- Fehler: Beim Start wird der Korg nicht erkannt, TD hat ein anderes Korg device gelistet.
+  
+  - Lösung: Dialogs -> MIDI Device Mapper -> Device Mappings -> das richtige In Device wählen
+
+
+
+
 
 ## MagicQ und lightingRig
 
-![alt text](/Users/jeanbluer/Documents/data/wip/arbeit/SystemFailed/SF-Light/manual/SF-lightingRig-MQ.png)
+![alt text](images/SF-lightingRig-MQ.png)
 
 Im Schaubild ist der Zusammenhang der 5 Hauptkomponenten des Patches beschrieben:
 
@@ -55,14 +60,16 @@ Im Schaubild ist der Zusammenhang der 5 Hauptkomponenten des Patches beschrieben
 
 ### Troubleshooting
 
-Fehler: Highlights sind nicht sichtbar. 
+- Fehler: Highlights sind nicht sichtbar. 
+  
+  - Lösung: HighlightChannel von MagicQ kommt nicht bei TD an, weil nicht hochgezogen, oder DMX vom MQ nicht bei TD ankommt
 
+- Fehler: DMX vom MagicQ kommt nicht bei TD an. 
+  
+  - Lösung: Setup DMX IO. 
+  
+  - Lösung: DMX-Receiver von TD funktioniert nicht richtig (im Balkendiagramm ist keine Änderung sichtbar, wenn die HLSpikie-Kanäle verändert werden) - Local Address hin und herstellen
 
-Lösung: HighlightChannel von MagicQ kommt nicht bei TD an, weil nicht hochgezogen, oder DMX vom MQ nicht bei TD ankommt
-
-Fehler: DMX vom MagicQ kommt nicht bei TD an. 
-Lösung: Setup DMX IO. 
-Lösung: DMX-Receiver von TD funktioniert nicht richtig (im Balkendiagramm ist keine Änderung sichtbar, wenn die HLSpikie-Kanäle verändert werden) - Local Address hin und herstellen
-
-Fehler: TDactivation reagiert nicht, obwohl DMX ankommt. 
-Lösung: Re-Init-all-Button (dann aber auch nochmal reset highlights)
+- Fehler: TDactivation reagiert nicht, obwohl DMX ankommt. 
+  
+  - Lösung: Re-Init-all-Button (dann aber auch nochmal reset highlights)

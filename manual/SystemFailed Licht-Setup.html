@@ -1259,7 +1259,7 @@ Die relevanten Trackerpositionen, die mit Highlights beleuchtet werden sollen, w
 <p>Im MagicQ kann mittels Aktivierungskanälen (Dimmerkanäle "TD Activation") gewählt werden, ob das lightingRig-TD oder MQ selber die Kontrolle über einzelne Spikies hat.</p>
 <p>Die Werte der Spikies, die "TD activated" sind, können durch vom TD ausgewählte Executes überschrieben werden.</p>
 <p>Der "Look" der Überschreibung durch TD kann im MagicQ anhand der "virtuellen" Highlight Fixtures ("HLspikie") gesetzt werden.</p>
-<p><img alt="alt text" src="file:///Users/jeanbluer/Documents/data/wip/arbeit/SystemFailed/SF-Light/manual/SF-light-wiring.png"></p>
+<p><img alt="alt text" src="images/SF-light-wiring.png"></p>
 <h2 class="atx" id="magicq-midi-interfacing">MagicQ-MIDI-Interfacing</h2>
 <p>Das TD-Patch midi2oscDAT übersetzt eingehende MIDI-Messages zu osc-Messages. Im Patch gibt es eine bearbeitbare Mapping-Tabelle.</p>
 <p>(<strong>TODO</strong>: Mapping-Möglichkeiten erklären, Encoderverwendung beschreiben - fine/coarse, ...)</p>
@@ -1272,7 +1272,7 @@ Die relevanten Trackerpositionen, die mit Highlights beleuchtet werden sollen, w
 </li>
 </ul>
 <h2 class="atx" id="magicq-und-lightingrig">MagicQ und lightingRig</h2>
-<p><img alt="alt text" src="file:///Users/jeanbluer/Documents/data/wip/arbeit/SystemFailed/SF-Light/manual/SF-lightingRig-MQ.png"></p>
+<p><img alt="alt text" src="images/SF-lightingRig-MQ.png"></p>
 <p>Im Schaubild ist der Zusammenhang der 5 Hauptkomponenten des Patches beschrieben:</p>
 <ul>
 <li><p>der <strong>Highlighter</strong> empfängt (über datexec1, script raw_highlights_exec.py) die Highlights vom Haupt TD-patch der Show. Hier werden die Spikies ausgewählt, die für jeden einzelnen Highlight verwendet werden. Neben den fortlaufend aktualisierten Positionen wird auch ein "Highlightcue" übertragen: Dieser entspricht einem bestimmten Highlight-Zweck (Performer-Highlight, Freeze-Violation, Evaluation-Highlight). Einige Grundparameter (Activation, Strobe) der Looks dieser unterschiedlichen HL und Eigenschaften wie "Anzahl der beteiligten Spikies" und "Priorität" werden aus der Tabelle dat_cue_table.csv gezogen, andere Parameter können im MagicQ per HLspikie-Fixtures gesetzt werden (Intensität, Farbe, Zoom, Höhe aka Tilt).
