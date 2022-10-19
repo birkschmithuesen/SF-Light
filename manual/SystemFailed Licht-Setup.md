@@ -11,13 +11,13 @@ Zur Integration der Midi-Controller gibt es ein Touchdesigner-Script ("midi2oscD
 Das "smarte" Element der Lichtsteuerung ist das Touchdesigner-Script lightingRig.toe.
 Die relevanten Trackerpositionen, die mit Highlights beleuchtet werden sollen, werden per UDP-Stream (touchIn) vom Haupt-Touchdesigner-Patch der Show geliefert.
 
-Im MagicQ kann mittels Aktivierungskanälen (Dimmerkanäle "TD Activation") gewählt werden, ob das lightingRig-TD oder MQ selber die Kontrolle über einzelne Spikies hat.
+Im MagicQ kann mittels Aktivierungskanälen (Dimmerkanäle "TD Activation" in MQ Universe 9) gewählt werden, ob das lightingRig-TD oder MQ selber die Kontrolle über einzelne Spikies hat.
 
 Die Werte der Spikies, die "TD activated" sind, können durch vom TD ausgewählte Executes überschrieben werden.
 
-Der "Look" der Überschreibung durch TD kann im MagicQ anhand der "virtuellen" Highlight Fixtures ("HLspikie") gesetzt werden.
+Der "Look" der Überschreibung durch TD kann im MagicQ anhand der "virtuellen" Highlight Fixtures ("HLspikie" auch in MQ Uni 9) gesetzt werden.
 
-![alt text](images/SF-light-wiring.png)
+ ![alt text](images/SF-light-wiring.png)
 
 ## MagicQ-MIDI-Interfacing
 
@@ -31,17 +31,14 @@ Das TD-Patch midi2oscDAT übersetzt eingehende MIDI-Messages zu osc-Messages. Im
   
   - Lösung: Dialogs -> MIDI Device Mapper -> Device Mappings -> das richtige In Device wählen
 
-
-
-
-
 ## MagicQ und lightingRig
 
 ![alt text](images/SF-lightingRig-MQ.png)
 
 Im Schaubild ist der Zusammenhang der 5 Hauptkomponenten des Patches beschrieben:
 
-- der **Highlighter** empfängt (über datexec1, script raw_highlights_exec.py) die Highlights vom Haupt TD-patch der Show. Hier werden die Spikies ausgewählt, die für jeden einzelnen Highlight verwendet werden. Neben den fortlaufend aktualisierten Positionen wird auch ein "Highlightcue" übertragen: Dieser entspricht einem bestimmten Highlight-Zweck (Performer-Highlight, Freeze-Violation, Evaluation-Highlight). Einige Grundparameter (Activation, Strobe) der Looks dieser unterschiedlichen HL und Eigenschaften wie "Anzahl der beteiligten Spikies" und "Priorität" werden aus der Tabelle dat_cue_table.csv gezogen, andere Parameter können im MagicQ per HLspikie-Fixtures gesetzt werden (Intensität, Farbe, Zoom, Höhe aka Tilt).
+- der **Highlighter** empfängt (über datexec1, script raw_highlights_exec.py) die Highlights vom Haupt TD-patch der Show. Im Highlighter werden die Spikies ausgewählt, die für jeden einzelnen Highlight verwendet werden. Neben den fortlaufend aktualisierten Positionen wird auch ein "Highlightcue" übertragen: Dieser entspricht einem bestimmten Highlight-Zweck (Performer-Highlight, Freeze-Violation, Evaluation-Highlight). Einige Grundparameter (Activation, Strobe) der Looks dieser unterschiedlichen HL und Eigenschaften wie "Anzahl der beteiligten Spikies" und "Priorität" werden aus der Tabelle dat_cue_table.csv gezogen, andere Parameter können im MagicQ per HLspikie-Fixtures gesetzt werden (Intensität, Farbe, Zoom, Höhe aka Tilt). 
+  Der Zoom wird übrigens im TD anhand der Positionen aus der Tabelle spikie_pos.tsv berechneten  Abstände skaliert. 
   (**TODO**: dat_cue_table.csv "überflüssig machen" - mindestens Shutter-Parameter auch aus MagicQ-Fixture holen, evtl. auch die anderen Parameter)
 
 - **DMX_in** empfängt Kanäle von MagicQ und gibt sie an subscribende Komponenten weiter:
@@ -73,3 +70,5 @@ Im Schaubild ist der Zusammenhang der 5 Hauptkomponenten des Patches beschrieben
 - Fehler: TDactivation reagiert nicht, obwohl DMX ankommt. 
   
   - Lösung: Re-Init-all-Button (dann aber auch nochmal reset highlights)
+
+- Fehler: raw-highlight 
