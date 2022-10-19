@@ -161,8 +161,11 @@ class Highlight(LampUser):
 		self.maxSize = int(Highlight.cueTable[str(self.cueId), 'Amount'].val)		
 		self.priority = int(Highlight.cueTable[str(self.cueId), 'Priority'].val)		
 
+	# gets called, whenever intensity changes from 0 to >0
+	# TODO: gets called regularly or at least when lamps are released
 	def acquireLamps(self):
-		lamps = self.lampManager.RequestLamps(self, self.maxSize)
+		if self.intensity is not 0:
+			lamps = self.lampManager.RequestLamps(self, self.maxSize)
 		return
 
 	def setLampAttributes(self, lamp):

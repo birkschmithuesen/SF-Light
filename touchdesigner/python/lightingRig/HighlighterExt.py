@@ -34,6 +34,11 @@ class HighlighterExt(dict):
 		self.clear()
 		return
 
+	# gets called onFrameStart from ExecuteDAT
+	def Tick(self):
+		debug("tick")
+		self.reTriggerLampAcquisition()
+
 	def printOutHighlights(self):
 		out = ""
 		for highlight in self.values():
@@ -88,18 +93,18 @@ class HighlighterExt(dict):
 
 			if trackId not in tempHighlights:
 				# complete new Highlight!
-				debug(f"highlight for {trackId}/{cueId} is completely new!")
+				#debug(f"highlight for {trackId}/{cueId} is completely new!")
 				highlight = Highlight(trackId, cueId)
 				newHighlights.append(highlight)
 			else:
 				if tempHighlights[trackId].cueId != cueId:
 					# this trackId has the cue changed - so it is considered new
 					highlight = Highlight(trackId, cueId)
-					debug(f"{highlight} has a new cue-type!")
+					#debug(f"{highlight} has a new cue-type!")
 					newHighlights.append(highlight)
 				else:
 					# if this trackId had a highlight before AND had the same cue, it is considered already existent
-					debug(f"highlight for {trackId} already there")
+					#debug(f"highlight for {trackId} already there")
 					pass
 
 				del tempHighlights[trackId]
@@ -111,5 +116,5 @@ class HighlighterExt(dict):
 		for newHighlight in newHighlights:
 			self.NewHighlight(newHighlight)
 
-		debug("stop reIndex", self)
+		#debug("stop reIndex", self)
 		return
