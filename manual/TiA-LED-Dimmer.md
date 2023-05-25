@@ -1,3 +1,8 @@
+## Grundfunktion
+
+Jede Box verbraucht 4 x 4 Adressen - pro Kanal RGBW.
+
+
 ## Konnektivität
 
 Die Box verbindet sich automatisch mit dem letzten konfigurierten WiFi. 
@@ -14,4 +19,11 @@ Bei Verbindung mit diesem WiFi sollte sich das Konfigurationsinterface direkt ö
 ### Configure WiFi
 Das gewünschte WiFi konfigurieren.
 (Nach Klick dauerts etwas bis die vorhandenen SSIDs gescannt wurden und angezeigt werden.)
+
+### Setup
+Es lässt sich Startadresse und Artnet-Universum einstellen.
+
+Die Einstellung fürs Artnet-Subnet wird nicht berücksichtigt. Es hört nur auf Subnet 0.
+
+(Evtl. ist irgendwo bei den Adressen was mit "Start der Zählung bei 1" vs "Start bei 0" - kann mich nicht mehr genau erinnern - Also im Zweifel mal die Nachbaradresse ausprobieren ;)
 
